@@ -1,0 +1,11 @@
+Flask==0.10.1
+Flask-Script==2.0.5
+Flask-WTF==0.10.0
+Flask-Zero==0.9.6
+itsdangerous==0.24
+Jinja2==2.8
+MarkupSafe==0.23
+qiniu==7.0.9.1
+requests==2.11.1
+Werkzeug==0.11.11
+WTForms==2.1
