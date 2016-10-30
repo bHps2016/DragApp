@@ -1,0 +1,68 @@
+body {
+	font-family: "Microsoft YaHei","Hiragino Sans GB","WenQuanYi Micr Hei",sans-serif;
+	text-align: center;
+}	
+.file_box {
+	width: 266px;
+	height: 100px;
+	line-height: 100px;
+	color: silver;
+	border: 2px dashed silver;
+}
+.file_box, .preview {
+	margin: 22px auto 0;
+}
+.preview {
+	width: 266px;
+}
+.preview img {
+	width: 100%;
+}
+.nav {
+	display: inline-block;
+	height: 24px;
+	font-size: 0;
+	background: #13ce66;
+	border-radius: 12px;
+}
+.nav_item {
+	/*border: 1px solid transparent;*/
+	display: inline-block;
+	font-size: 14px;
+	width: 133px;
+	height: 100%;
+	border: 1px solid lightblue;
+}
+.flag {
+	background: #fff;
+	color: #fff;
+}
+.qiniu.flag {
+	border-bottom-right-radius: 12px;
+	border-top-right-radius: 12px;
+}
+.qiniu {
+	border-right: 0;
+	border-bottom-left-radius: 12px;
+	border-top-left-radius: 12px;
+}
+.foregin {
+	border-left: 0;
+	border-bottom-right-radius: 12px;
+	border-top-right-radius: 12px;
+}
+.foregin.flag {
+	border-bottom-left-radius: 12px;
+	border-top-left-radius: 12px;
+}
+.url_cont {
+	font-family: 12px;
+	margin: 5px auto;
+	background: silver;
+	border: 1px solid grey;
+	width: 266px;
+	line-height: 1.2;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap; 
+}

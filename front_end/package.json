@@ -1,0 +1,25 @@
+{
+  "name": "drag",
+  "version": "1.0.0",
+  "description": "{",
+  "main": "main.js",
+  "scripts": {
+    "test": "test",
+    "start": "electron ."
+  },
+  "keywords": [
+    "electron"
+  ],
+  "author": "shengxihu",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^1.4.1"
+  },
+  "dependencies": {
+    "electron-reload": "^1.0.2",
+    "menubar": "^5.1.0",
+    "request": "^2.76.0",
+    "request-promise": "^4.1.1",
+    "vue": "^2.0.3"
+  }
+}
