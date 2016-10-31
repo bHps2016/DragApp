@@ -1,6 +1,11 @@
 'use strict';
 var menubar = require('menubar')
-var menu = menubar()
+var path = require('path')
+var menu = menubar({
+    dir: __dirname,
+    // index: 'menubar.html'
+    index: 'file://' + path.join(__dirname, 'menubar.html') // fix
+})
 const electron = require('electron')
 // Module to control application life.
 require('electron-reload')(__dirname);
@@ -16,13 +21,13 @@ let mainWindow
 function createWindow () {
   // Create the browser window.
   // mainWindow = new BrowserWindow({width: 360, height: 400})
-  mainWindow = new BrowserWindow({width: 0, height: 0})
+  mainWindow = new BrowserWindow({width: 500, height: 500})
 
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/index.html`)
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
