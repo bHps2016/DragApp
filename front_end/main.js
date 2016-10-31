@@ -37,8 +37,7 @@ function createWindow () {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', function() {
-    var subpy = require("child_process").spawn('python', ['../back/manage.py', 'runserver', '-p', '5486'])
-    var rq = require("request-promise")
+    var subpy = require("child_process").spawn('python', ['../back_end/manage.py', 'runserver'])
     createWindow()
 })
 
@@ -47,6 +46,7 @@ app.on('window-all-closed', function () {
   // On OS X it is common for applications and their menu bar
   // to stay active until the user quits explicitly with Cmd + Q
   if (process.platform !== 'darwin') {
+    subpy.kill('SIGINT')
     app.quit()
   }
 })

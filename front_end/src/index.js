@@ -16,7 +16,7 @@ $(function(){
     });
     var target_qiniu;
     var target_foregin;
-    var url = 'http://127.0.0.1:5486/upload/';
+    var url = 'http://127.0.0.1:5000/upload/';
     var qiniu = document.getElementById("qiniu");
     var foregin = document.getElementById("foregin");
     var res_url_cont = document.getElementById("res_url_cont");
@@ -24,12 +24,12 @@ $(function(){
     var md_url = document.getElementById("md_url");
     var box = document.getElementById('file_box'); //拖拽区域
     qiniu.addEventListener("click", function(e){
-        url = 'http://127.0.0.1:5486/oupload/';
+        url = 'http://127.0.0.1:5000/oupload/';
         qiniu.className="nav_item qiniu flag";
         foregin.className="nav_item foregin";
     },false)
     foregin.addEventListener("click", function(e){
-        url = 'http://127.0.0.1:5486/upload/';
+        url = 'http://127.0.0.1:5000/upload/';
         foregin.className="nav_item foregin flag";
         qiniu.className="nav_item qiniu";
     },false)
@@ -77,7 +77,7 @@ $(function(){
         xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
         xhr.onload = function (res,err) {
           var res_url = JSON.parse(res.currentTarget.response).url;
-          // var res_url = 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4155302816,1201715785&fm=116&gp=0.jpg'
+          // var res_url = ''
           str = "外链（点击复制）：<div class='url_cont' id='url'>"+res_url+"</div>";
           str+= "<div class='url_cont' id='img_url'>&lt;img src='"+res_url+"&gt</div>";
           str+= "<div class='url_cont' id='md_url'>![]("+res_url+")</div>"

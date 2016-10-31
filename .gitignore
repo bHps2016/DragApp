@@ -1,3 +1,5 @@
 **/*.pyc
 **/node_modules/
+**/venv/
+npm-debug.log
 
